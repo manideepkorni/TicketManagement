@@ -4,8 +4,8 @@ const CUSTOMAXIOS = axios.create({
         // 'Content-type': 'application/json; charset=utf-8',
         // 'Accept':'application/json',
         // 'ForceUseSession':'true',
-        'access-control-allow-origin': '*',
-        'access-control-allow-methods':'*',
+        'Access-Control-Allow-Origin': '*',
+       // 'access-control-allow-methods':'*',
         // 'client_id':'6E92FB07AFECA0232461660B885F6F89',
         // 'client_secret':'B73F3EE5649707E1A97CD14CCD6B96B8D5B06579FCB963B835DF9AADB6C8335A',
         // 'grant_type':'client_credentials'
