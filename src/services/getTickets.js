@@ -1,7 +1,8 @@
 import CUSTOMAXIOS from "./customaxios";
 import queryString from 'query-string';
-const BASE_URL = "https://143489-crm-bundle.creatio.com";
-
+//const BASE_URL = "https://143489-crm-bundle.creatio.com";
+// const BASE_URL = "http://localhost:1234";
+const BASE_URL = "https://090706-studio.creatio.com";
 export const fetchTickets = async () => {
   try {
     //console.log(loginResponse, "login response");
@@ -14,12 +15,16 @@ export const fetchTickets = async () => {
       'client_secret':'B73F3EE5649707E1A97CD14CCD6B96B8D5B06579FCB963B835DF9AADB6C8335A',
       'grant_type':'client_credentials'
     }
+    const payload3 = {
+      'client_id':'6E92FB07AFECA0232461660B885F6F89',
+      'client_secret':'B73F3EE5649707E1A97CD14CCD6B96B8D5B06579FCB963B835DF9AADB6C8335A'
+    }
     const loginUrl = `${BASE_URL}/ServiceModel/AuthService.svc/Login`;
+    const newLoginUrl = `${BASE_URL}/0/ServiceModel/PsgTicketManagementCustomService.svc/PsgTicketManagementUserCreds`;
     const oauth2Url = 'https://143489-crm-bundle-is.creatio.com/connect/token';
     //  console.log(loginUrl, "loginurl");
-    await CUSTOMAXIOS.post(oauth2Url,queryString.stringify(payload2) ).then(
+    await CUSTOMAXIOS.post(newLoginUrl,payload3 ).then(
       (response) => {
-
         console.log(response, "login response");
         // const cookies = response.headers['set-cookie'];
         // console.log(cookies,"cookies");

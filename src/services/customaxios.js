@@ -9,7 +9,7 @@ const CUSTOMAXIOS = axios.create({
         // 'client_id':'6E92FB07AFECA0232461660B885F6F89',
         // 'client_secret':'B73F3EE5649707E1A97CD14CCD6B96B8D5B06579FCB963B835DF9AADB6C8335A',
         // 'grant_type':'client_credentials'
-        'Accept':'*/*'
+      //  'Accept':'*/*'
     }
 });
 
